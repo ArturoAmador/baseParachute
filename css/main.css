@@ -27,14 +27,25 @@
 .main{
     background: #fff;
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 
 .max_width{
     max-width: 1020px;
 }
 
+.tecFactor{
+    max-width: 150px;
+    position: absolute;
+    right: 7px;
+}
+
+
 /* Fonts */
 .relaway{
     font-family: 'Raleway', sans-serif;
+}
+
+.parisienne{
+    font-family: 'Parisienne', cursive;
 }
