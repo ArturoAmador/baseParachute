@@ -34,6 +34,10 @@
     max-width: 1020px;
 }
 
+.max_width450{
+    max-width: 450px;
+}
+
 .tecFactor{
     max-width: 150px;
     position: absolute;
