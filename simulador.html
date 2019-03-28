@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Simulador</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Parachute</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Parisienne|Raleway" rel="stylesheet"> 
     <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -12,7 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/main.css"/>
-    
 </head>
 <body>
 
@@ -26,54 +23,75 @@
                 <a class="js-scroll-trigger" href="#page-top">Física del Paracaidas</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#page-top">Home</a>
+                <a class="js-scroll-trigger" href="/index.html">Home</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#about">Equipo</a>
+                <a class="js-scroll-trigger" href="/index.html">Equipo</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#portfolio">Investigación</a>
+                <a class="js-scroll-trigger" href="#">Investigación</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="/FactorTec.html">Factor Tec!</a>
+                <a class="js-scroll-trigger" href="#">Factor Tec!</a>
             </li>
             <li class="sidebar-nav-item">
                 <a class="js-scroll-trigger" href="/simulador.html">Simulador</a>
             </li>
         </ul>
     </nav>
-    <center>
-        <div class="row">
-            <div class="card text-center">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body row">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+            <h1 class="mb-1 white">Salto en paracaidas</h1>
+            <h3 class="mb-5 white">
+                <em>Fisica I</em>
+            </h3>
         </div>
-    </center>
-   
-    <canvas id="myChart" width="400" height="250"></canvas>
+        <div class="overlay"></div>
+    </header>
+
+    <div class="main main_raise">
+        <br/>
+        <canvas id="myChart" width="400" height="250"></canvas>
+    </div>
+    <br/><br/>    
+
+    <!-- Footer -->
+    <footer class="footer text-center bg_space_grey">
+        <div class="container">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#">
+                        <i class="icon-social-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#">
+                        <i class="icon-social-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white" href="#">
+                        <i class="icon-social-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">&copy;2019</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
     <scrip src="js/bootstrap.bundle.js"></scrip>
-    
     <script src="js/simuladorNoUniforme.js"></script>
+   
+
 </body>
 </html>

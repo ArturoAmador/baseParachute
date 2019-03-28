@@ -9,10 +9,11 @@ const T = 254; //Temperatura en kelvin
 
 
 //Chart js
-
+window.dataArray = [];
+window.label = [];
 var canvas = document.getElementById('myChart');
 var data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: window.label,
     datasets: [
         {
             label: "My First dataset",
@@ -33,25 +34,26 @@ var data = {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 3,
-            data: [0],
+            showLine:true,
+            data: dataArray,
         }
     ]
 };
 
 
-setTimeout(() => {
-    for (let i = 1; i <= 30000; i++) {
-        console.log(p0 * Math.exp(-i /7482.2));
 
-        setTimeout(() => {
-            myLineChart.data.datasets[0].data[i] = (p0 * Math.exp(-i /7482.2));
-            myLineChart.data.labels[i] = i;   
-            myLineChart.update(); 
-        }, 250);
-        
-        
-    }    
-}, 2000);
+setTimeout(() => {
+    for (let i = 5700; i >= 0; i--) {
+
+        console.log(p0 * Math.exp(-i /7482.2));
+        dataArray.push(Math.abs(Math.exp(-i/7482.2) - Math.exp(-72/(2*7482.2)))); 
+        if (i % 25 == 0) {
+            window.label.push(i);
+            myLineChart.update();       
+        }
+    }
+}, 1000);
+
 
 var option = {
 	showLines: true
@@ -60,4 +62,3 @@ var myLineChart = Chart.Line(canvas,{
 	data:data,
   options:option
 });
-
