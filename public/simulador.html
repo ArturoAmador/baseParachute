@@ -44,9 +44,9 @@
     <!-- Header -->
     <header class="masthead d-flex">
         <div class="container text-center my-auto">
-            <h1 class="mb-1 white">Salto en paracaidas</h1>
+            <h1 class="mb-1 white">Atmosfera Constante</h1>
             <h3 class="mb-5 white">
-                <em>Fisica I</em>
+                <em>Simulador</em>
             </h3>
         </div>
         <div class="overlay"></div>
@@ -78,39 +78,30 @@
                 <button type="submit" id="calc" onclick="runSimulator(event)" class="btn btn-primary">Calcular</button>
             </form>
             <br/>
-            <div class="col-3" id="tablePlace">
+            <div class="col-6" id="tablePlace">
 
             </div>
-            
-
         </center>
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-3" id="tablePlace">
-
-            </div>
-            <div class="col-3"></div>
-        </div>
         <br><br>
-
-        <!--<canvas id="canvas_1" width="500" height="450"></canvas>
-
-        <div id="controls" style="align:left; width:625px; height:70px">
-			<label for="masa">Masa (kg):</label> <input type="range" id="masa" min="50" max="100" step="5" value="72" onchange="printValue('masa','masa_1')">  
-            <input type="text" id="masa_1" value="72" size="3">  
-            <label for="area">Area (m<sup>2</sup>) :</label> <input type="range" id="area" min="0.2" max="1" step="0.1" value="0.6" onchange="printValue('area','area_1')">  
-            <input type="text" id="area_1" value="0.6" size="3">  <br>
-            <label for="altura">Altura (km) :</label> <input type="range" id="altura" min="5" max="30" step="1" value="30" onchange="printValue('altura','altura_1')">  
-            <input type="text" id="altura_1" value="30" size="3"> 
-            <div id="botones">
-                <input id="nuevo" type="button" value="Nuevo">
-                <input id="empieza" type="button" value="►" disabled="">
-                <input id="pausa" type="button" value="||" disabled="">
-                <input id="paso" type="button" value=">|" style="display:none">
+        <center>
+            <canvas id="canvas_1" width="500" height="450"></canvas>
+            <div id="controls" style="align:left; width:625px; height:70px">
+                <label for="masa">Masa (kg):</label> <input type="range" id="masa" min="50" max="100" step="5" value="72" onchange="printValue('masa','masa_1')">  
+                <input type="text" id="masa_1" value="72" size="3">  
+                <label for="area">Area (m<sup>2</sup>) :</label> <input type="range" id="area" min="0.2" max="1" step="0.1" value="0.6" onchange="printValue('area','area_1')">  
+                <input type="text" id="area_1" value="0.6" size="3">  <br>
+                <label for="altura">Altura (km) :</label> <input type="range" id="altura" min="5" max="30" step="1" value="30" onchange="printValue('altura','altura_1')">  
+                <input type="text" id="altura_1" value="30" size="3"> 
+                <div id="botones">
+                    <input id="nuevo" type="button" value="Nuevo">
+                    <input id="empieza" type="button" value="►" disabled="">
+                    <input id="pausa" type="button" value="||" disabled="">
+                    <input id="paso" type="button" value=">|" style="display:none">
+                </div>
             </div>
-        </div>-->
-    </div>
-    <br/><br/>    
+        </center>
+        
+        <br/><br/>    
 
     <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -146,10 +137,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
     <scrip src="js/bootstrap.bundle.js"></scrip>
-    
     <script src="js/simuladorUniforme.js"></script>
     <script src="js/index.js"></script>
-   
-
+    <script src="js/simuladorNoUniforme.js"></script> 
 </body>
 </html>

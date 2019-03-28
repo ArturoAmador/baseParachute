@@ -40,6 +40,12 @@ function runSimulator(e) {
     let speedInitSecondFase = speedBeforeParachuteOpen(g, getTime(alturaParacaidasOpen, alturaInicial, g));
     let velocidadFinal = speedBefordLand(limitSpeed, speedBeforeParachuteOpen(g, getTime(alturaParacaidasOpen, alturaInicial, g)), alturaParacaidasOpen, 0, g);
 
+    if (areaParacaidas === "" || masaPerson === "" || alturaInicial === "") {
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        });
+    }
+
     if (alturaParacaidasOpen < 1500) {
         if(!confirm('Esto no es lo más recomendable dado que podria ser perjudicial para la salud, ¿Esta seguro de su decición?')){
             return;
@@ -55,23 +61,31 @@ function runSimulator(e) {
     html += `</thead>`;
     html += `<tbody>`;
     html += `<tr>`;
-    html += `<td>Time en caida libre</td>`;
-    html += `<td>${timeFreeFall}</td>`;
+    html += `<td>Tiempo en caida libre</td>`;
+    html += `<td>${timeFreeFall} s</td>`;
     html += `</tr>`;
     html += `<tr>`;
     html += `<td>Velocidad Limite</td>`;
-    html += `<td>${limitSpeed}</td>`;
+    html += `<td>${limitSpeed} m/s</td>`;
     html += `</tr>`;
     html += `<tr>`;
     html += `<td>Velocidad Antes de abrir el paracaidas</td>`;
-    html += `<td>${speedInitSecondFase}</td>`;
+    html += `<td>${speedInitSecondFase} m/s</td>`;
     html += `</tr>`;
     html += `<tr>`;
     html += `<td>Velocidad Antes al aterrizar</td>`;
-    html += `<td>${velocidadFinal}</td>`;
+    if (velocidadFinal > 30) {
+        html += `<td style='background:red;'>${velocidadFinal} m/s</td>`;
+    }else{
+        html += `<td>${velocidadFinal} m/s</td>`;
+    }
     html += `</tr>`;
     html += `</tbody>`;
     html += `</table>`;
+
+    if (alturaParacaidasOpen === "") {
+        
+    }
 
     $('#tablePlace').html(html);
 
