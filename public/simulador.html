@@ -78,9 +78,12 @@
 
             </div>
         </center>
-        <br><br>
+
+
         <center>
-            <br/>
+            <h4>Comportamiento de la presion del aire en una atmosfera no constante</h4>
+            <iframe src="https://www.wolframcloud.com/objects/e4349800-f534-4d3b-9986-790e6df4d914" width="500" height="450"></iframe>
+            <br/><br/>
             <h4>Simulador en atmosfera no uniforme</h4>
             <br/>
             <canvas id="canvas_1" width="500" height="500"></canvas>
@@ -103,12 +106,19 @@
             <p>Mohazzabi P. <em>High-altitude free fall.</em> Am. J. Phys. 64 (10) October 1996, pp. 1242-1246</p>
         </center>
         <br/><br/>
-
-        <br/><br/>
         <center>
+            <h4 class="alert-danger"><i class="fas fa-exclamation-triangle"></i> Simulador experimental</h4>
+            <p class="alert-danger">
+                Este simulador no esta optimisado y la caraga de trabajo puede llegar a ser demasiado, se recomienda implementara en una
+                computadora con 16gb de memoria en ram
+            </p>
 
+            <button type="button" class="btn btn-danger" onclick="startSimuladorX()"><i class="fas fa-exclamation-triangle"></i> Iniciar</button>
+
+            <canvas id="charCanvas" width="500" height="500" hidden></canvas>
         </center>
         <br/><br/>
+
     </div>
     <br/>
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -166,12 +176,17 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="js/simuladorNoUniformeX.js"></script>
     <scrip src="js/bootstrap.bundle.js"></scrip>
     <script src="js/simuladorUniforme.js"></script>
     <script src="js/index.js"></script>
     <script src="js/simuladorNoUniforme.js"></script>
+
 
 </body>
 </html>
