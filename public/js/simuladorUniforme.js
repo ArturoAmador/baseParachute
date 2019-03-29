@@ -40,16 +40,17 @@ function runSimulator(e) {
     let speedInitSecondFase = speedBeforeParachuteOpen(g, getTime(alturaParacaidasOpen, alturaInicial, g));
     let velocidadFinal = speedBefordLand(limitSpeed, speedBeforeParachuteOpen(g, getTime(alturaParacaidasOpen, alturaInicial, g)), alturaParacaidasOpen, 0, g);
 
-    if (areaParacaidas === "" || masaPerson === "" || alturaInicial === "") {
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        });
-    }
 
-    if (alturaParacaidasOpen < 1500) {
+
+    if (alturaParacaidasOpen < 1500 && alturaInicial !== "") {
         if(!confirm('Esto no es lo más recomendable dado que podria ser perjudicial para la salud, ¿Esta seguro de su decición?')){
             return;
-        };
+        }
+    }
+
+    if (areaParacaidas === "" || masaPerson === "" || alturaInicial === "") {
+        $('.modal').show();
+        return;
     }
 
     let html = '<table class="table table-striped">'
@@ -74,6 +75,7 @@ function runSimulator(e) {
     html += `</tr>`;
     html += `<tr>`;
     html += `<td>Velocidad Antes al aterrizar</td>`;
+
     if (velocidadFinal > 30) {
         html += `<td style='background:red;'>${velocidadFinal} m/s</td>`;
     }else{
@@ -86,8 +88,10 @@ function runSimulator(e) {
     if (alturaParacaidasOpen === "") {
         
     }
-
     $('#tablePlace').html(html);
+    
+}
 
-
+function closeModal() {
+    $('.modal').hide();
 }

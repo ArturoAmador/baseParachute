@@ -40,8 +40,6 @@
             </li>
         </ul>
     </nav>
-
-    <!-- Header -->
     <header class="masthead d-flex">
         <div class="container text-center my-auto">
             <h1 class="mb-1 white">Atmosfera Constante</h1>
@@ -51,12 +49,10 @@
         </div>
         <div class="overlay"></div>
     </header>
-
     <div class="main main_raise">
         <br/>
-
-        
         <center>
+            <h4> Simulador en atmosfera uniforme </h4>
             <form action="" class="max_width450">
                 <div class="form-group">
                     <label for="area">Area del Paracaidas</label>
@@ -72,7 +68,7 @@
                 </div>
                 <div class="form-group">
                     <label for="abrirParcaidas">Altura a la que se abrira el paracaidas</label>
-                    <input type="number" class="form-control" id="abrirParcaidas" aria-describedby="alturaSalto" placeholder="0.0 m" required/>
+                    <input type="number" class="form-control" id="abrirParcaidas" aria-describedby="alturaSalto" placeholder="0.0 m"/>
                     <small class="form-text text-mutedb" style="color:red;">Se recomienda que no sea menor a 1500 metros.</small>
                 </div>
                 <button type="submit" id="calc" onclick="runSimulator(event)" class="btn btn-primary">Calcular</button>
@@ -84,7 +80,10 @@
         </center>
         <br><br>
         <center>
-            <canvas id="canvas_1" width="500" height="450"></canvas>
+            <br/>
+            <h4>Simulador en atmosfera no uniforme</h4>
+            <br/>
+            <canvas id="canvas_1" width="500" height="500"></canvas>
             <div id="controls" style="align:left; width:625px; height:70px">
                 <label for="masa">Masa (kg):</label> <input type="range" id="masa" min="50" max="100" step="5" value="72" onchange="printValue('masa','masa_1')">  
                 <input type="text" id="masa_1" value="72" size="3">  
@@ -99,30 +98,56 @@
                     <input id="paso" type="button" value=">|" style="display:none">
                 </div>
             </div>
+            <br/>
+            <strong>Autor del Programa atmosfera no uniforme</strong>
+            <p>Mohazzabi P. <em>High-altitude free fall.</em> Am. J. Phys. 64 (10) October 1996, pp. 1242-1246</p>
         </center>
-        
-        <br/><br/>    
-
-    <div class="modal" tabindex="-1" role="dialog">
+        <br/><br/>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title bg-danger">Alerta</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div class="modal-header bg-danger" style="color: white;">
+                    <h4 class="modal-title"><i class="fas fa-exclamation-triangle"></i> Alerta</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal();">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body bg-danger">
-                    <p>Todos los campos son requeridos</p>
+                <div class="modal-body bg-danger" style="color: white;">
+                    <strong>Se requieren los campos</strong>
+                    <ol>
+                        <li>masa de paracaidas</li>
+                        <li>altura de salto</li>
+                        <li>altura de salto</li>
+                    </ol>
                 </div>
                 <div class="modal-footer bg-danger">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info" data-dismiss="myModal" onclick="closeModal();">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalAlert">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger" style="color: white;">
+                    <h4 class="modal-title"><i class="fas fa-exclamation-triangle"></i> Alerta</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-danger" style="color: white;">
+                    <strong>Esto puede resultar perjudicial para la salud se recomienda que el nivel minimo al que se deba abrir el paracaidas sea de 1500 metros</strong>
+                </div>
+                <div class="modal-footer bg-danger">
+                    <button type="button" class="btn btn-warning" data-dismiss="myModal">Continuar</button>
+                    <button type="button" class="btn btn-success" data-dismiss="myModal" onclick="closeModal();">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer text-center bg_space_grey">
         <div class="container">
             <p class="text-muted small mb-0">&copy;2019</p>
@@ -139,6 +164,7 @@
     <scrip src="js/bootstrap.bundle.js"></scrip>
     <script src="js/simuladorUniforme.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/simuladorNoUniforme.js"></script> 
+    <script src="js/simuladorNoUniforme.js"></script>
+
 </body>
 </html>
