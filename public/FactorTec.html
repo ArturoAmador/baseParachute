@@ -51,47 +51,159 @@
     <div class="main main_raise">
         <br/>
         <center>
-                <h2>¿Que es el fcator Tec?</h2>
+                <h2>INTRODUCCIÓN</h2>
         </center>
         <img src="/static/img/factorTec.png"  class="tecFactor" alt=""/>
         <p class="relaway max_width center_item">
-                
+            El paracaidismo es un deporte extremo en el que las personas que lo practican están sometidas a tres fases, aunque ellos no lo sepan, durante la primera fase podemos ver cómo el cuerpo es expuesto a la aceleración generada por la tierra en un comportamiento de caída libre para después experimentar una desaceleración que usa a su favor la resistencia del aire para evitar una muerte segura en cualquier otro caso y finalizar con el aterrizaje. 
         </p>
         <br/>
-        <p class="relaway max_width center_item">
-                
-        </p>
+        <center>
+            <h2>ESCENARIO</h2>
+        </center>
         <br/>
         <p class="relaway max_width center_item">
-                
-        </p>
-        <br/>
-        <p class="relaway max_width center_item">
+            El paracaidismo es uno de los llamados “deportes extremos” que resulta ser muy atractivo para algunas personas, a pesar de los riesgos implícitos. Considera que tu tío recientemente abrió un club de aficionados al paracaidismo y que ha contratado a los miembros de tu equipo como “asesores técnicos” para determinar y calcular los factores de riesgo que pueden presentarse y poder así establecer las condiciones de seguridad necesarias que debe cumplir cada salto. En particular les ha pedido que calculen, entre otros aspectos a) la altura mínima a la que debe abrirse el paracaídas para que el paracaidista no resulte lastimado al llegar a tierra, y b) las velocidades y aceleraciones máximas a las que estará sometido el intrépido paracaidista.
+            ¿Qué consideraciones físicas se deben tomar en cuenta? Establezcan claramente las suposiciones que consideren necesarias.
             
         </p>
+        <br/>
+        <center>
+            <h2>Objetivo</h2>
+        </center>
+        <br>
+        <p class="relaway max_width center_item">
+            Desarrollar un programa que represente los componentes mecánicos que influyen en el salto en paracaídas indicando   la altura a la que es idóneo abrir el paracaídas para evitar lesiones así mismo desarrollar un sistema de ecuaciones que nos permita evaluar los factores que intervienen durante la caida en paracaidas,así garantizar la seguridad del individuo.   
+        </p>
+        <br/>
+        <center>
+            <h2>DESARROLLO DE LA SOLUCIÓN: ANÁLISIS</h2>
+        </center>
+        <p class="relaway max_width center_item">
+                El salto en paracaídas es un movimiento con un modelo matemático que puede llegar a ser muy complejo, las razones de este es que es un movimiento donde las fuerzas que actúan son  variables; si habláramos de un planeta con atmósfera nula no habría problema, el movimiento podría ser descrito por el modelo que compone a la caída libre, por otro lado tendríamos otro escenario donde existiera una atmósfera simétrica es decir que la presión del aire fuera la misma, pero en nuestro mundo real la presión de la atmósfera varía dependiendo de a qué altura te encuentres y eso afecta al fenómeno de la caída. 
+                El paracaidismo es un deporte en el que se presenta el fenómeno físico de la caída libre, representando muy bien este movimiento, donde se presentan varios factores que se juntan para crear un ambiente de caída. Es importante entender el comportamiento del paracaidismo pues es un proceso secuencial que se divide en fases, cada una muy importante para su funcionamiento. Debido a todo esto y las complicaciones que se podrían presentar al momento de realizar un salto en paracaídas, nuestro programa podrá informar, dependiendo de los valores que se le introduzcan, si las condiciones planteadas por el usuario sean las adecuadas para desplegar el paracaídas a una altura segura sin que el usuario reciba algún daño.                 
+        </p>
+        <br/>
+        <center> <strong>LA FÍSICA DEL PARACAIDISMO</strong> </center>
+        <br>
+        <ol class="max_width center_item">
+            <li>
+                <strong>Características de la caída libre</strong>
+                <p class="relaway max_width center_item">La caída libre es un movimiento con aceleración constante esto se debe gracias a la gravedad, esta tiene un valor de 9.81 m/s2 aproximadamente, esta caída quien la produce es la fuerza de gravedad, aquella fuerza que atrae a los cuerpos al centro de la Tierra. En el vacío el movimiento de caída es de aceleración constante, siendo dicha aceleración la misma para todos los cuerpos, independientemente de cuales sean su forma y su peso. También interactúa la fricción del aire con el cuerpo del individuo y las diferentes presiones atmosféricas. </p>
+            </li>
+            <br>
+            <li>
+                <strong>Altura a la cual se deben abrir el paracaídas</strong>
+                <p class="relaway max_width center_item">Los saltos en paracaída comerciales suelen oscilar entre 5,000 y 2,500 metros de altura sobre el nivel de la tierra lo que da entre 25 a 75 segundo de caída libre, por seguridad convención el paracaídas se abre entre a una altura promedio de 1,500 metros dando entre cinco a diez minutos de vuelo antes de aterrizar </p>
+            </li>
+            <br>
+            <li>
+                <strong class="relaway max_width center_item">Velocidades que alcanza un cuerpo en caída libre</strong>
+                <p class="relaway max_width center_item">
+                    El paracaidista está sometido a la acción de su propio peso. El empuje del aire se considera despreciable ya que la densidad del aire es mucho menor que la del cuerpo. Por otra parte, el  aire será un desacelerador como se visualiza en la (fig.1) los brazos del paracaidista están ligeramente más elevados , ya que el aire hace esa fuerza de empuje desacelerando el cuerpo y aventando sus brazos y piernas es por eso que la posición del paracaidista se ve como si echara hacia atrás sus extremidades , en cambio en la (fig.2) la hoja cae más lento debido a que el aire actúa sobre ella haciendo que des acelere, mientras que cuando se encuentra en el vacío llegan los dos objetos (hoja y bola negra)al mismo tiempo,esto sucede porque ninguna fuerza frena su desplazamiento. 
+                </p>
+                <br>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div>
+                <br>
+                <center>
+                    <h2>
+                        Calcular la velocidad con la que llega al suelo
+                    </h2>
+                </center>
+                <p class="relaway max_width center_item">
+                    K= (densidad del aire)(el área del paracaídas)(coeficiente de forma)/2
+                    Vi √masa del paracaidista x gravedad /k= m/s
+                    EJEMPLO:
+                    Masa del paracaidista de m=72 kg,
+                    Área del paracaídas A=0.6 m2
+                    El paracaidista parte del reposo desde la posición x=2000 m
+                    Abre el paracaídas en la posición x=1000 m, sobre el suelo.
+                    Calcular la velocidad con la que llega al suelo
+                    Los datos para calcular la velocidad límite vl son:
+                    Densidad del aire r=1.29 kg/m3
+                    Coeficiente de forma d =0.8                
+                </p>
+            </li>
+            <br>
+            <li>
+                <strong class="relaway max_width center_item">¿Qué consideraciones físicas se deben tomar en cuenta?</strong>
+                <p class="relaway max_width center_item">Para un salto en paracaídas la física toma un papel muy importante .Entre las consideraciones más importantes en el paracaidismo es la gravedad ,el clima, la altura,la velocidad,el tiempo ,intensidad y dirección del viento etc.
+                        Todo cuerpo que se libera en el aire o espacio tiende a caer a la superficie terrestre, esto es debido a la atracción que ejerce el centro de nuestro planeta y se denomina fuerza de gravedad, cuya magnitud es de 9,8 m/s y se le conoce como Constante de Gravitación Universal (G).
+                        De igual manera el Viento incide de manera directa en la        caída libre de los cuerpos, es decir, a mayor cantidad de viento el objeto se frena por la acción de este.
+                        La Presión Atmosférica también influye de forma directamente
+                        proporcional sobre los objetos en caída libre.
+                        </p>
+            </li>
+            <br>
+            <li>
+                <strong class="relaway max_width center_item"> La resistencia del aire en el paracaidismo  </strong>
+                <p class="relaway max_width center_item">La resistencia del aire cuando solo cae el cuerpo sin abrir el paracaídas es despreciable, debido a que la densidad del aire es mucho menor que la del cuerpo por lo que el rozamiento es mínimo. 
+                        Una vez abierto el paracaídas:  
+                        El paracaidista está sometido a la acción de su peso y de una fuerza de rozamiento proporcional al cuadrado de la velocidad. 
+                        </p>
+            </li>
+        </ol>
+        <br>
+        <p class="relaway max_width center_item">Cuando el paracaidista en caída libre abre el paracaídas, reduce bruscamente su velocidad hasta alcanzar una velocidad límite constante vl, que se obtiene cuando el peso es igual a la fuerza de rozamiento, es decir, cuando la aceleración es cero. -mg+kv2=0 El valor de la velocidad límite es independiente de la velocidad inicial del paracaidista en el momento de abrir el paracaídas.</p>
+        <br>
+        <center>
+            <h2>FASES DEL PARACAIDISMO</h2>
+        </center>
+        <br>
+        <center>
+            <strong class="relaway max_width center_item">Fase I: Caida libre sin paracaídas</strong>
+        </center>
+        <p class="relaway max_width center_item">
+            Para iniciar con el salto  se debe salir con fuerza, en la misma dirección de vuelo del avión, arquear el cuerpo sobre la pelvis, levantar la cabeza para ver al jefe de saltos en la puerta , abrir brazos y piernas simétricamente al estar en el aire sin paracaídas como se puede ver en la (fig.3)la cual recrea la posición adecuada para el vuelo caída sin paracaídas. Por otra parte se experimenta la resistencia del viento en tu cuerpo ,esto  es normal; ya que tu cuerpo experimenta la resistencia del viento ,también se le conoce como resistencia aerodinámica o fuerza de arrastre, la cual siempre ocurre en sentido opuesto a la velocidad.Como lo ilustra la (img.4)en que podemos ver como influye  la  fuerza de arrastre en su movimiento y velocidad ya que  opone resistencia contraria al hombre que pretende avanzar , desacelerando;la fuerza de arrastre va hacer contraria al movimiento produciendo que sienta un jalon por la parte de su espalda.
+        </p>
+        <div class="row max_width center_item">
+            <div class="col-6">
+                <img src="" alt="">
+            </div>
+            <div class="col-6">
+                <img src="" alt="">
+            </div>
+        </div>
+        <br>
+        <p class="relaway max_width center_item">
+            Esta fuerza se opone al avance de un cuerpo a través del aire. la resistencia del aire hace que se  reduzca la aceleración de modo que se mueve con una velocidad casi constante.
+        </p>
+        <br>
+        <center>
+                <strong class="relaway max_width center_item">Fase II: Vuelo con paracaídas</strong>
+        </center>
+        <p class="relaway max_width center_item">Al abrir el paracaídas usted sentirá un jalón esto se debe a que la resistencia del aire atrapado por el paracaídas determina la velocidad de caída. Este efecto crea un diferencial de presión entre el aire atrapado y la estela, que es de baja presión. El aire a alta presión se esfuerza para unirse al aire de baja presión, tirando del paracaídas y luchando contra la gravedad, lo que hace que frene su caída.</p>
+        <br>
+        <center>
+            <strong class="relaway max_width center_item">Fase III: El aterrizaje</strong>
+        </center>
+        <p class="relaway max_width center_item">Cuando se empieza en la fase de aterrizaje es muy importante revisar la campana como se aprecia en la (fig.5). la campana debe estar recta , completamente abierta para poderla manejar sin complicaciones.</p>
+        <br>
+        <center>
+            <img src="" alt=""/>
+        </center>
+        <br>
+        <p class="relaway max_width center_item">Es conveniente antes de subir al avión elegir alguna referencia fácil de localizar e identificar la zona y obstáculos.Posteriormente se realizarán las tres maniobras que se reflejan en la (fig 6) en el lado izquierdo muestra como debe ser la posición a los 300 m.posteriormente empezar el aterrizaje , seguido de girar en función del viento como se muestra en la imagen del medio y por último optar por una posición semi flexionada como se muestra en la fig, del lado superior derecho, como se aprecia el paracaidista semi flexiona las rodillas cuando está muy aproximado del suelo ,con el objetivo de evitar un impacto brusco contra el suelo.</p>
+        <br>
+        <div class="row">
+            <img src="" alt=""/>
+        </div>
+        <br/>
+        <center>
+            <h2>PROPUESTA DE SOLUCIÓN</h2>
+        </center>
+        <p class="relaway max_width center_item">Una vez recopilando datos y detectando factores que van a intervenir a nuestra caída libre, nuestra solución es proponer un programa donde se ingresen los datos del área del paracaídas, el peso de la persona que saltará, la altura de salto, la altura a la que se abrirá el paracaídas, con base a lo investigado el valor de la altura que es más recomendable abrir el paracaídas es a los 1500 metros, esto para calcular el tiempo en caída libre, la velocidad límite, la velocidad antes de abrir el paracaídas y la velocidad antes de aterrizar. El programa contará con un simulador el cual va a graficar la trayectoria del salto en paracaídas</p>
+        <br><br>
     </div>
+    <br><br>
     
 
     <!-- Footer -->
     <footer class="footer text-center bg_space_grey">
         <div class="container">
-            <ul class="list-inline mb-5">
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white mr-3" href="#">
-                        <i class="icon-social-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white mr-3" href="#">
-                        <i class="icon-social-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white" href="#">
-                        <i class="icon-social-github"></i>
-                    </a>
-                </li>
-            </ul>
             <p class="text-muted small mb-0">&copy;2019</p>
         </div>
     </footer>

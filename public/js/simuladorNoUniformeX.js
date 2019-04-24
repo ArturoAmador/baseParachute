@@ -2,7 +2,6 @@
 
 const p0 = 1.29; //presion de la atmósfera a nivel del mar
 const M = 0.0288; //peso molecular del aire
-const g = 9.81;
 const K = Math.pow(1.3805*10, -23);
 const T = 254; //Temperatura en kelvin
 

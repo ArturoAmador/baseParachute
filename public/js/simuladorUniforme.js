@@ -1,6 +1,6 @@
 //constantes conocidad 
 const g = 9.81;
-const airDensity = 1.29;
+const airDensity = 1.3;
 const shapeFormCoef = 0.8;
 
 
